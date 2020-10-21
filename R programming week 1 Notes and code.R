@@ -78,5 +78,35 @@ x #levels specify the order to which we assign levels (see unclass to verify)
 #is.NA(), is.NaN() used to check for NAs and NaNs
 #NaN is also NA, but an NA is not a NaN.
 
+#data frames
+#like matrices but elements should be same length
+#each row has a name: Row.names()
+#can be created using read.table() or read.csv()
+#can be converted by calling data.matrix() <- objects are coerced into one class.
+x<- data.frame(foo=1:4, bar=c(T,T,F,F))
+x
+nrow(x)
+ncol(x)
+#sequence above is fills first rows, second sequence fills second column
+#name attributes
+#useful for writing readable codes and self describing objects
+x<- 1:3
+names(x)
+names(x)<- c("edi","meow","wow")
+x
+names(x)
+#i've assigned names by assigning them when I asked about them that's cool lol
+#lists can also have names
+x<-list(a=1,b=2,c=3)
+x
+#see that once I made the list I also assigned a name to it.
+#matrices can have names too.
+m<-matrix(1:4,nrow=2,ncol=2)
+dimnames(m)<-list(c("a","b"),c("c","d"))
+m
+#see that I've named each row and each column (rows, then columns much like how
+#you define them.)
+
+
 
 
